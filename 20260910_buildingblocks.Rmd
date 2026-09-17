@@ -1,0 +1,76 @@
+---
+title: '20260910_buildingblocks'
+output: html_document
+date: "2026-09-10"
+---
+
+#2026 - 09- 10
+#Emma Fanuele
+
+this is code from building blocks in class
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+# arithmetic
+4 + 2
+
+(17 * 3 + 2) ^ 2
+```
+
+
+```{r}
+#variable assignment
+
+x = (17 * 3 + 2) ^ 2
+```
+
+
+```{r}
+#function
+
+x = runif(10)
+
+y = c(1, 10)
+
+mean(x)
+sd(x)
+
+x + y
+
+set.seed(1) #selects a starting point before doing random number selection
+runif(10)
+```
+
+```{r}
+#data frames
+
+example_df = 
+  tibble(
+    vec_numeric = 1:4,
+    vec_char = c("my", "name", "is", "emma"),
+    vec_logical = c(TRUE, TRUE, FALSE, TRUE),
+    vec_factor = factor(c("male", "male", "female", "female")) #R treats factor variables differently from chars --> useful for categorical vars etc.
+  )
+```
+
+```{r}
+# making a plot
+
+set.seed(1)
+
+plot_df = 
+  tibble(
+    x = rnorm(1000, 0.5),
+    y = 1 + 2 * x + rnorm(1000)
+  )
+
+#histogram
+ggplot(plot_df, aes(x = x)) + geom_histogram()
+
+#scatter plot
+ggplot(plot_df, aes(x = x, y = y)) + geom_point()
+```
+
