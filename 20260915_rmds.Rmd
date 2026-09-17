@@ -139,3 +139,9 @@ After the previous code chunk, write a bullet list given the mean, median, and s
 * the standard deviation is 'r round(sd(pull(assessment_2, num_var)), 2)'
 
 
+What if I try to add a histogram?
+```{r}
+ggplot(plot_df, aes(x=x)) + geom_histogram()
+```
+
+
